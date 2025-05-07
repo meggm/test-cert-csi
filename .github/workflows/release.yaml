@@ -44,7 +44,7 @@ jobs:
           fi
           # if neither option nor version is provided, then minor release is taken by default (Auto-release)
           echo "versionEnv=minor" >> $GITHUB_OUTPUT
-          echo "processedVersion=${{ outputs.processedVersion }}"
+          echo "processedVersion=${{ processedVersion }}"
   csm-release:
     needs: [process-inputs]
     uses: meggm/common-github-actions-test/.github/workflows/csm-release-driver-module.yaml@main
